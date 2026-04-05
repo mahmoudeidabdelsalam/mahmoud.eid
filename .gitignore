@@ -1,0 +1,8 @@
+node_modules
+.next
+.open-next
+.vercel
+.wrangler
+dist
+cloudflare-env.d.ts
+*.log

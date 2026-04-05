@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: true,
+  output: 'standalone', // مهم جدا لتوليد worker
+  reactStrictMode: true,
+  typescript: {
+    ignoreBuildErrors: false,
   },
-  output: 'standalone', // مهم جداً
+  // experimental: { turbo: true }, <-- شيل ده
 };
 
 module.exports = nextConfig;

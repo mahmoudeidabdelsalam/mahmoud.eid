@@ -7,8 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "pages:build": "npx @cloudflare/next-on-pages@1",
+    "deploy": "npm run pages:build && npx wrangler deploy",
+    "preview": "npm run pages:build && npx wrangler pages dev .vercel/output/static",
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
     "@opennextjs/cloudflare": "^1.17.1",
     "@tailwindcss/postcss": "^4.2.2",
     "@types/node": "^25.5.2",

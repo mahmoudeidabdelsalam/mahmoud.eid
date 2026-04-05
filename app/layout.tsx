@@ -3,7 +3,13 @@ import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import { resume } from "@/data/resume";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+export const runtime = "edge";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata = {
   title: `${resume.name} — Senior Front-End Developer`,
@@ -17,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );

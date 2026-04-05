@@ -1,11 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'standalone', // مهم جدا لتوليد worker
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-  // experimental: { turbo: true }, <-- شيل ده
 };
 
-module.exports = nextConfig;
+export default nextConfig;

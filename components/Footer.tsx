@@ -2,19 +2,32 @@ import type { Resume } from "@/data/resume";
 
 export function Footer({ resume }: { resume: Resume }) {
   return (
-    <footer className="border-t border-white/[0.06] py-8 px-4">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/30">
-        <p>
-          © {new Date().getFullYear()} {resume.name}. All rights reserved.
+    <footer className="relative border-t border-white/6 py-10 px-4 overflow-hidden">
+      {/* Subtle glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[100px] bg-violet-600/8 blur-[60px] pointer-events-none" />
+
+      <div className="relative max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
+        <div className="flex items-center gap-3">
+          <div className="w-6 h-6 rounded-md bg-violet-600 flex items-center justify-center text-[10px] font-black text-white">
+            M
+          </div>
+          <p className="text-sm text-white/30">
+            © {new Date().getFullYear()} {resume.name}
+          </p>
+        </div>
+
+        <p className="text-xs text-white/20 hidden sm:block">
+          Built with Next.js · Tailwind CSS · Framer Motion
         </p>
-        <div className="flex items-center gap-6">
+
+        <div className="flex items-center gap-5">
           {resume.links.map((l) => (
             <a
               key={l.label}
               href={l.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white/60 transition-colors"
+              className="text-sm text-white/30 hover:text-violet-400 transition-colors duration-200"
             >
               {l.label}
             </a>

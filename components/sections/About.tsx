@@ -60,7 +60,7 @@ export function About({ resume }: { resume: Resume }) {
             {[resume.location, "Open to Remote", "14+ Years Exp."].map((f) => (
               <span
                 key={f}
-                className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-white/50 bg-white/[0.03]"
+                className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-white/50 bg-white/3"
               >
                 {f}
               </span>
@@ -79,7 +79,7 @@ export function About({ resume }: { resume: Resume }) {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <Card className="h-full flex flex-col gap-3 group hover:border-violet-500/30 transition-colors duration-300">
-                <div className={`w-10 h-10 rounded-xl bg-linear-to-br ${color} flex items-center justify-center border border-white/[0.06]`}>
+                <div className={`w-10 h-10 rounded-xl bg-linear-to-br ${color} flex items-center justify-center border border-white/6`}>
                   <Icon size={18} className="text-violet-300" />
                 </div>
                 <p className="font-bold text-sm leading-snug">{title}</p>

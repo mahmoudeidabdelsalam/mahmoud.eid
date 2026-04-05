@@ -1,9 +1,7 @@
 {
-  "name": "front",
   "main": ".open-next/worker.js",
-  "compatibility_date": "2026-04-05",
-  "compatibility_flags": ["nodejs_compat"],
-  "build": {
-    "command": "npx opennextjs-cloudflare build"
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
   }
 }

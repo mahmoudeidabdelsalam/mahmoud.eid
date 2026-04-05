@@ -121,7 +121,7 @@ export function Navbar({ name }: { name: string }) {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="px-3 py-2.5 rounded-lg text-sm text-white/60 hover:text-white hover:bg-white/[0.05] transition-all"
+                  className="px-3 py-2.5 rounded-lg text-sm text-white/60 hover:text-white hover:bg-white/5 transition-all"
                 >
                   {l.label}
                 </a>

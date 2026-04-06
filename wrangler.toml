@@ -1,8 +1,0 @@
-name = "mahmoud-eid"
-main = ".open-next/worker.js"
-compatibility_date = "2026-04-05"
-type = "javascript"
-
-[site]
-bucket = ".open-next/assets"
-entry-point = ".open-next"

@@ -3,8 +3,6 @@ import type { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import { resume } from "@/data/resume";
 
-export const runtime = "edge";
-
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",

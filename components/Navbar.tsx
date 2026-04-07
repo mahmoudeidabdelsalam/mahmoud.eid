@@ -53,13 +53,11 @@ export function Navbar({ name }: { name: string }) {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 group">
-          <div className="w-7 h-7 rounded-lg bg-violet-600 flex items-center justify-center text-xs font-black text-white shadow-[0_0_12px_rgba(124,58,237,0.5)]">
-            M
-          </div>
-          <span className="text-sm font-bold text-white/80 group-hover:text-white transition-colors">
-            {name.split(" ")[0]}{" "}
-            <span className="text-violet-400">{name.split(" ")[1]}</span>
-          </span>
+          <img
+            src="/logo-white.webp"
+            alt={name}
+            className="h-8 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop links */}
@@ -68,7 +66,7 @@ export function Navbar({ name }: { name: string }) {
             <a
               key={l.href}
               href={l.href}
-              className={`relative px-3.5 py-2 text-sm rounded-lg transition-colors duration-200 ${
+              className={`relative px-3.5 py-2 text-sm rounded-xs transition-colors duration-200 ${
                 active === l.href
                   ? "text-white"
                   : "text-white/50 hover:text-white/80"
@@ -77,7 +75,7 @@ export function Navbar({ name }: { name: string }) {
               {active === l.href && (
                 <motion.span
                   layoutId="nav-pill"
-                  className="absolute inset-0 rounded-lg bg-white/[0.07]"
+                  className="absolute inset-0 rounded-xs bg-white/[0.07]"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
                 />
               )}
@@ -89,7 +87,7 @@ export function Navbar({ name }: { name: string }) {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#contact"
-            className="text-sm px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold transition-colors duration-200 shadow-[0_0_16px_rgba(124,58,237,0.4)]"
+            className="text-sm px-4 py-2 rounded-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-colors duration-200 shadow-[0_0_16px_rgba(37,99,235,0.4)]"
           >
             Hire Me
           </a>
@@ -97,7 +95,7 @@ export function Navbar({ name }: { name: string }) {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-white/10 text-white/60 hover:text-white hover:border-white/20 transition-all"
+          className="md:hidden w-9 h-9 flex items-center justify-center rounded-xs border border-white/10 text-white/60 hover:text-white hover:border-white/20 transition-all"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -121,7 +119,7 @@ export function Navbar({ name }: { name: string }) {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="px-3 py-2.5 rounded-lg text-sm text-white/60 hover:text-white hover:bg-white/5 transition-all"
+                  className="px-3 py-2.5 rounded-xs text-sm text-white/60 hover:text-white hover:bg-white/5 transition-all"
                 >
                   {l.label}
                 </a>
@@ -129,7 +127,7 @@ export function Navbar({ name }: { name: string }) {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 px-3 py-2.5 rounded-xl text-sm text-center bg-violet-600 hover:bg-violet-500 text-white font-semibold transition-colors"
+                className="mt-2 px-3 py-2.5 rounded-xs text-sm text-center bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-colors"
               >
                 Hire Me
               </a>

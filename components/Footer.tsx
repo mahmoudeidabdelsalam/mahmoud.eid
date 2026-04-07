@@ -4,13 +4,11 @@ export function Footer({ resume }: { resume: Resume }) {
   return (
     <footer className="relative border-t border-white/6 py-10 px-4 overflow-hidden">
       {/* Subtle glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[100px] bg-violet-600/8 blur-[60px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[100px] bg-blue-600/8 blur-[60px] pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-3">
-          <div className="w-6 h-6 rounded-md bg-violet-600 flex items-center justify-center text-[10px] font-black text-white">
-            M
-          </div>
+          <img src="/logo-white.webp" alt={resume.name} className="h-6 w-auto object-contain" />
           <p className="text-sm text-white/30">
             © {new Date().getFullYear()} {resume.name}
           </p>
@@ -27,7 +25,7 @@ export function Footer({ resume }: { resume: Resume }) {
               href={l.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-white/30 hover:text-violet-400 transition-colors duration-200"
+              className="text-sm text-white/30 hover:text-blue-400 transition-colors duration-200"
             >
               {l.label}
             </a>

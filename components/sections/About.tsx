@@ -10,25 +10,25 @@ const highlights = [
     icon: Code2,
     title: "14+ Years of Code",
     desc: "React, Vue, Next.js — building scalable, high-performance web apps since 2011.",
-    color: "from-violet-500/20 to-violet-500/5",
+    color: "from-blue-500/20 to-blue-500/5",
   },
   {
     icon: Users,
     title: "Team Leadership",
     desc: "Led cross-functional teams across KSA, Kuwait & Egypt delivering complex SaaS platforms.",
-    color: "from-indigo-500/20 to-indigo-500/5",
+    color: "from-blue-500/20 to-blue-500/5",
   },
   {
     icon: Zap,
     title: "Performance Obsessed",
     desc: "Reduced production load times from 5s → 1.2s through code splitting & lazy loading.",
-    color: "from-purple-500/20 to-purple-500/5",
+    color: "from-blue-500/20 to-blue-500/5",
   },
   {
     icon: Layers,
     title: "Design + Engineering",
     desc: "Bridging UI/UX design and frontend architecture — Figma to pixel-perfect code.",
-    color: "from-fuchsia-500/20 to-fuchsia-500/5",
+    color: "from-blue-500/20 to-blue-500/5",
   },
 ];
 
@@ -60,7 +60,7 @@ export function About({ resume }: { resume: Resume }) {
             {[resume.location, "Open to Remote", "14+ Years Exp."].map((f) => (
               <span
                 key={f}
-                className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-white/50 bg-white/3"
+                className="text-xs px-3 py-1.5 rounded-xs border border-white/10 text-white/50 bg-white/3"
               >
                 {f}
               </span>
@@ -78,9 +78,9 @@ export function About({ resume }: { resume: Resume }) {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <Card className="h-full flex flex-col gap-3 group hover:border-violet-500/30 transition-colors duration-300">
-                <div className={`w-10 h-10 rounded-xl bg-linear-to-br ${color} flex items-center justify-center border border-white/6`}>
-                  <Icon size={18} className="text-violet-300" />
+              <Card className="h-full flex flex-col gap-3 group hover:border-blue-500/30 transition-colors duration-300">
+                <div className={`w-10 h-10 rounded-xs bg-linear-to-br ${color} flex items-center justify-center border border-white/6`}>
+                  <Icon size={18} className="text-blue-300" />
                 </div>
                 <p className="font-bold text-sm leading-snug">{title}</p>
                 <p className="text-white/40 text-xs leading-relaxed">{desc}</p>

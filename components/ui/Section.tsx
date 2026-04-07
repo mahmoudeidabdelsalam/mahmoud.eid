@@ -26,8 +26,8 @@ export function Section({ id, children, className = "" }: SectionProps) {
 export function SectionLabel({ children }: { children: string }) {
   return (
     <div className="flex items-center gap-4 mb-12">
-      <div className="w-1.5 h-1.5 rounded-full bg-violet-400" />
-      <span className="text-xs font-bold tracking-[0.25em] uppercase text-violet-400/80">
+      <div className="w-1.5 h-1.5 rounded-xs bg-blue-400" />
+      <span className="text-xs font-bold tracking-[0.25em] uppercase text-blue-400/80">
         {children}
       </span>
       <div className="flex-1 h-px bg-linear-to-r from-white/10 to-transparent" />

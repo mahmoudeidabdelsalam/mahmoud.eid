@@ -12,9 +12,9 @@ const tools = [
   { name: "Figma", emoji: "🖌️", color: "hover:border-pink-500/40 hover:bg-pink-500/5" },
   { name: "Git", emoji: "🌿", color: "hover:border-orange-500/40 hover:bg-orange-500/5" },
   { name: "Docker", emoji: "🐳", color: "hover:border-blue-500/40 hover:bg-blue-500/5" },
-  { name: "REST API", emoji: "🔗", color: "hover:border-violet-500/40 hover:bg-violet-500/5" },
+  { name: "REST API", emoji: "🔗", color: "hover:border-blue-500/40 hover:bg-blue-500/5" },
   { name: "SASS", emoji: "💅", color: "hover:border-pink-400/40 hover:bg-pink-400/5" },
-  { name: "VS Code", emoji: "💻", color: "hover:border-indigo-500/40 hover:bg-indigo-500/5" },
+  { name: "VS Code", emoji: "💻", color: "hover:border-blue-500/40 hover:bg-blue-500/5" },
 ];
 
 export function Tools() {
@@ -37,7 +37,7 @@ export function Tools() {
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -5, scale: 1.06 }}
-            className={`flex flex-col items-center gap-2.5 p-4 rounded-2xl bg-bg-card border border-white/6 transition-all duration-200 cursor-default ${tool.color}`}
+            className={`flex flex-col items-center gap-2.5 p-4 rounded-xs bg-bg-card border border-white/6 transition-all duration-200 cursor-default ${tool.color}`}
           >
             <span className="text-2xl leading-none">{tool.emoji}</span>
             <span className="text-[11px] text-white/45 font-medium text-center leading-tight">

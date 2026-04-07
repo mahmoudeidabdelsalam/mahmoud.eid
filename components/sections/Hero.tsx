@@ -19,16 +19,16 @@ export function Hero({ resume }: { resume: Resume }) {
       {/* ── Background layers ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Primary glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[900px] h-[700px] rounded-full bg-violet-700/10 blur-[140px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[900px] h-[700px] rounded-xs bg-blue-700/10 blur-[140px]" />
         {/* Secondary accent */}
-        <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] rounded-full bg-indigo-600/8 blur-[90px]" />
-        <div className="absolute bottom-[10%] left-[5%] w-[250px] h-[250px] rounded-full bg-purple-600/8 blur-[80px]" />
+        <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] rounded-xs bg-blue-600/8 blur-[90px]" />
+        <div className="absolute bottom-[10%] left-[5%] w-[250px] h-[250px] rounded-xs bg-blue-600/8 blur-[80px]" />
 
         {/* Dot grid */}
         <div
           className="absolute inset-0 opacity-[0.18]"
           style={{
-            backgroundImage: "radial-gradient(circle, rgba(139,92,246,0.35) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(59,130,246,0.35) 1px, transparent 1px)",
             backgroundSize: "40px 40px",
             maskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%)",
           }}
@@ -43,14 +43,14 @@ export function Hero({ resume }: { resume: Resume }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-violet-500/25 bg-violet-500/8 text-violet-300 text-xs font-semibold mb-10 backdrop-blur-sm"
+          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xs border border-blue-500/25 bg-blue-500/8 text-blue-300 text-xs font-semibold mb-10 backdrop-blur-sm"
         >
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-xs bg-green-400 opacity-75" />
+            <span className="relative inline-flex rounded-xs h-2 w-2 bg-green-400" />
           </span>
           Available for new opportunities
-          <Sparkles size={12} className="text-violet-400" />
+          <Sparkles size={12} className="text-blue-400" />
         </motion.div>
 
         {/* Name */}
@@ -73,11 +73,11 @@ export function Hero({ resume }: { resume: Resume }) {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex items-center justify-center gap-3 mb-4"
         >
-          <div className="h-px w-12 bg-violet-500/40" />
+          <div className="h-px w-12 bg-blue-500/40" />
           <p className="text-base md:text-lg text-white/55 font-medium tracking-wide">
             Senior Front-End Developer &amp; Creative Designer
           </p>
-          <div className="h-px w-12 bg-violet-500/40" />
+          <div className="h-px w-12 bg-blue-500/40" />
         </motion.div>
 
         {/* Location */}

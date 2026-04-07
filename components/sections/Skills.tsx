@@ -14,13 +14,13 @@ function SkillBar({ name, level }: { name: string; level: number }) {
   return (
     <div className="flex items-center gap-3">
       <span className="text-xs text-white/60 w-28 shrink-0">{name}</span>
-      <div className="flex-1 h-1.5 rounded-full bg-white/6 overflow-hidden">
+      <div className="flex-1 h-1.5 rounded-xs bg-white/6 overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="h-full rounded-full bg-linear-to-r from-violet-500 to-indigo-400"
+          className="h-full rounded-xs bg-linear-to-r from-blue-500 to-blue-400"
         />
       </div>
       <span className="text-[10px] text-white/30 w-8 text-right">{level}%</span>
@@ -45,13 +45,13 @@ export function Skills({ resume }: { resume: Resume }) {
       label: "Frontend",
       icon: "⚛️",
       skills: resume.skills.frontend,
-      accent: "border-violet-500/30 bg-violet-500/5",
+      accent: "border-blue-500/30 bg-blue-500/5",
     },
     {
       label: "Styling & UI",
       icon: "🎨",
       skills: resume.skills.styling,
-      accent: "border-indigo-500/30 bg-indigo-500/5",
+      accent: "border-blue-500/30 bg-blue-500/5",
     },
     {
       label: "CMS & Backend",
@@ -63,13 +63,13 @@ export function Skills({ resume }: { resume: Resume }) {
       label: "Tools",
       icon: "🛠️",
       skills: resume.skills.tools,
-      accent: "border-purple-500/30 bg-purple-500/5",
+      accent: "border-blue-500/30 bg-blue-500/5",
     },
     {
       label: "Performance",
       icon: "⚡",
       skills: resume.skills.performance,
-      accent: "border-fuchsia-500/30 bg-fuchsia-500/5",
+      accent: "border-blue-500/30 bg-blue-500/5",
     },
     {
       label: "Design",
@@ -115,7 +115,7 @@ export function Skills({ resume }: { resume: Resume }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
-                className={`rounded-2xl border p-4 ${accent}`}
+                className={`rounded-xs border p-4 ${accent}`}
               >
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-base">{icon}</span>
@@ -127,7 +127,7 @@ export function Skills({ resume }: { resume: Resume }) {
                   {skills.map((s) => (
                     <span
                       key={s}
-                      className="text-[11px] px-2 py-0.5 rounded-md bg-white/6 text-white/60 border border-white/6"
+                      className="text-[11px] px-2 py-0.5 rounded-xs bg-white/6 text-white/60 border border-white/6"
                     >
                       {s}
                     </span>

@@ -24,7 +24,7 @@ export function Contact({ resume }: { resume: Resume }) {
       label: "Email",
       value: resume.email,
       href: `mailto:${resume.email}`,
-      color: "hover:border-violet-500/40 hover:bg-violet-500/5",
+      color: "hover:border-blue-500/40 hover:bg-blue-500/5",
     },
     {
       icon: ExternalLink,
@@ -43,7 +43,7 @@ export function Contact({ resume }: { resume: Resume }) {
   ];
 
   const inputCls =
-    "w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-white/25 focus:outline-none focus:border-violet-500/50 focus:bg-violet-500/5 transition-all duration-200";
+    "w-full px-4 py-3 rounded-xs bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-white/25 focus:outline-none focus:border-blue-500/50 focus:bg-blue-500/5 transition-all duration-200";
 
   return (
     <Section id="contact">
@@ -72,25 +72,25 @@ export function Contact({ resume }: { resume: Resume }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className={`flex items-center gap-4 p-4 rounded-2xl bg-bg-card border border-white/6 transition-all duration-200 group ${color}`}
+              className={`flex items-center gap-4 p-4 rounded-xs bg-bg-card border border-white/6 transition-all duration-200 group ${color}`}
             >
-              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center shrink-0 group-hover:border-violet-500/30 transition-colors">
-                <Icon size={16} className="text-white/50 group-hover:text-violet-400 transition-colors" />
+              <div className="w-10 h-10 rounded-xs bg-white/5 border border-white/8 flex items-center justify-center shrink-0 group-hover:border-blue-500/30 transition-colors">
+                <Icon size={16} className="text-white/50 group-hover:text-blue-400 transition-colors" />
               </div>
               <div className="min-w-0">
                 <p className="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-0.5">{label}</p>
                 <p className="text-sm text-white/65 group-hover:text-white transition-colors truncate">{value}</p>
               </div>
-              <ArrowUpRight size={14} className="ml-auto text-white/20 group-hover:text-violet-400 transition-colors shrink-0" />
+              <ArrowUpRight size={14} className="ml-auto text-white/20 group-hover:text-blue-400 transition-colors shrink-0" />
             </motion.a>
           ))}
 
           {/* Availability card */}
-          <div className="mt-2 p-5 rounded-2xl border border-emerald-500/20 bg-emerald-500/5">
+          <div className="mt-2 p-5 rounded-xs border border-emerald-500/20 bg-emerald-500/5">
             <div className="flex items-center gap-2 mb-2">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-xs bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-xs h-2 w-2 bg-emerald-400" />
               </span>
               <span className="text-xs font-bold text-emerald-400">Available Now</span>
             </div>

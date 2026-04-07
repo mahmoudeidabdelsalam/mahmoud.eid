@@ -37,7 +37,7 @@ export function Tools() {
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -5, scale: 1.06 }}
-            className={`flex flex-col items-center gap-2.5 p-4 rounded-2xl bg-bg-card border border-white/[0.06] transition-all duration-200 cursor-default ${tool.color}`}
+            className={`flex flex-col items-center gap-2.5 p-4 rounded-2xl bg-bg-card border border-white/6 transition-all duration-200 cursor-default ${tool.color}`}
           >
             <span className="text-2xl leading-none">{tool.emoji}</span>
             <span className="text-[11px] text-white/45 font-medium text-center leading-tight">

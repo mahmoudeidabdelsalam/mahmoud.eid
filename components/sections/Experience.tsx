@@ -32,7 +32,7 @@ export function Experience({ resume }: { resume: Resume }) {
               </div>
 
               {/* Card */}
-              <div className="relative bg-bg-card border border-white/[0.06] rounded-2xl p-6 hover:border-violet-500/25 hover:bg-bg-card-hover transition-all duration-300 overflow-hidden">
+              <div className="relative bg-bg-card border border-white/6 rounded-2xl p-6 hover:border-violet-500/25 hover:bg-bg-card-hover transition-all duration-300 overflow-hidden">
                 {/* Top highlight line */}
                 <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/8 to-transparent" />
 

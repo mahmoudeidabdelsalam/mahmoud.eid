@@ -55,7 +55,7 @@ export function Projects({ resume }: { resume: Resume }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group relative bg-bg-card border border-white/[0.06] rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/35 hover:bg-bg-card-hover transition-all duration-300 overflow-hidden cursor-default"
+            className="group relative bg-bg-card border border-white/6 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/35 hover:bg-bg-card-hover transition-all duration-300 overflow-hidden cursor-default"
           >
             {/* Gradient bg */}
             <div className={`absolute inset-0 bg-linear-to-br ${p.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
@@ -104,7 +104,7 @@ export function Projects({ resume }: { resume: Resume }) {
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: i * 0.06 }}
               whileHover={{ y: -2 }}
-              className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-bg-card border border-white/[0.06] hover:border-violet-500/30 hover:bg-violet-500/5 transition-all duration-200 group"
+              className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-bg-card border border-white/6 hover:border-violet-500/30 hover:bg-violet-500/5 transition-all duration-200 group"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-1.5 h-1.5 rounded-full bg-violet-500/50 group-hover:bg-violet-400 transition-colors" />

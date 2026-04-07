@@ -72,9 +72,9 @@ export function Contact({ resume }: { resume: Resume }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className={`flex items-center gap-4 p-4 rounded-2xl bg-bg-card border border-white/[0.06] transition-all duration-200 group ${color}`}
+              className={`flex items-center gap-4 p-4 rounded-2xl bg-bg-card border border-white/6 transition-all duration-200 group ${color}`}
             >
-              <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center shrink-0 group-hover:border-violet-500/30 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/8 flex items-center justify-center shrink-0 group-hover:border-violet-500/30 transition-colors">
                 <Icon size={16} className="text-white/50 group-hover:text-violet-400 transition-colors" />
               </div>
               <div className="min-w-0">

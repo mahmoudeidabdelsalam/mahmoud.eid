@@ -14,7 +14,7 @@ function SkillBar({ name, level }: { name: string; level: number }) {
   return (
     <div className="flex items-center gap-3">
       <span className="text-xs text-white/60 w-28 shrink-0">{name}</span>
-      <div className="flex-1 h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
+      <div className="flex-1 h-1.5 rounded-full bg-white/6 overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
@@ -127,7 +127,7 @@ export function Skills({ resume }: { resume: Resume }) {
                   {skills.map((s) => (
                     <span
                       key={s}
-                      className="text-[11px] px-2 py-0.5 rounded-md bg-white/[0.06] text-white/60 border border-white/[0.06]"
+                      className="text-[11px] px-2 py-0.5 rounded-md bg-white/6 text-white/60 border border-white/6"
                     >
                       {s}
                     </span>

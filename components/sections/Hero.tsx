@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Mail, MapPin, Sparkles } from "lucide-react";
+import { ArrowDown, Download, MessageCircle, MapPin, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import type { Resume } from "@/data/resume";
 
@@ -11,20 +11,20 @@ const stats = [
 ];
 
 export function Hero({ resume }: { resume: Resume }) {
+  const whatsappUrl = `https://wa.me/${resume.phone.replace(/\D/g, "")}?text=${encodeURIComponent(
+    `Hi ${resume.name.split(" ")[0]}, I'd like to discuss a project with you.`
+  )}`;
+
   return (
     <section
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden"
     >
-      {/* ── Background layers ── */}
+      {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Primary glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[900px] h-[700px] rounded-xs bg-blue-700/10 blur-[140px]" />
-        {/* Secondary accent */}
-        <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] rounded-xs bg-blue-600/8 blur-[90px]" />
-        <div className="absolute bottom-[10%] left-[5%] w-[250px] h-[250px] rounded-xs bg-blue-600/8 blur-[80px]" />
-
-        {/* Dot grid */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[900px] h-[700px] rounded-full bg-blue-700/10 blur-[140px]" />
+        <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] rounded-full bg-blue-600/8 blur-[90px]" />
+        <div className="absolute bottom-[10%] left-[5%] w-[250px] h-[250px] rounded-full bg-blue-600/8 blur-[80px]" />
         <div
           className="absolute inset-0 opacity-[0.18]"
           style={{
@@ -35,20 +35,38 @@ export function Hero({ resume }: { resume: Resume }) {
         />
       </div>
 
-      {/* ── Content ── */}
+      {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto w-full">
+
+        {/* Avatar */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="flex justify-center mb-6"
+        >
+          <div className="relative">
+            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-blue-500/30 shadow-[0_0_30px_rgba(37,99,235,0.3)]">
+              <img
+                src="/avatar.png"
+                alt={resume.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* Online dot */}
+            <span className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-green-400 border-2 border-bg shadow-sm">
+              <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75" />
+            </span>
+          </div>
+        </motion.div>
 
         {/* Status badge */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xs border border-blue-500/25 bg-blue-500/8 text-blue-300 text-xs font-semibold mb-10 backdrop-blur-sm"
+          transition={{ duration: 0.5, delay: 0.05 }}
+          className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-blue-500/25 bg-blue-500/8 text-blue-300 text-xs font-semibold mb-8 backdrop-blur-sm"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-xs bg-green-400 opacity-75" />
-            <span className="relative inline-flex rounded-xs h-2 w-2 bg-green-400" />
-          </span>
           Available for new opportunities
           <Sparkles size={12} className="text-blue-400" />
         </motion.div>
@@ -108,11 +126,11 @@ export function Hero({ resume }: { resume: Resume }) {
           transition={{ duration: 0.5, delay: 0.45 }}
           className="flex flex-wrap items-center justify-center gap-3 mb-16"
         >
-          <Button href={`mailto:${resume.email}`} variant="primary">
-            <Mail size={15} />
-            Contact Me
+          <Button href={whatsappUrl} variant="primary" target="_blank">
+            <MessageCircle size={15} />
+            WhatsApp Me
           </Button>
-          <Button href="#" variant="outline">
+          <Button href="/Mahmoud-Eid.pdf" variant="outline" target="_blank">
             <Download size={15} />
             Download CV
           </Button>
@@ -145,7 +163,7 @@ export function Hero({ resume }: { resume: Resume }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/25 hover:text-white/50 transition-colors group"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/25 hover:text-white/50 transition-colors"
       >
         <span className="text-[10px] tracking-widest uppercase font-medium">Scroll</span>
         <motion.div

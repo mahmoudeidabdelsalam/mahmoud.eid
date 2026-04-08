@@ -32,10 +32,14 @@ const coreSkills = [
   { name: "React / Next.js", level: 95 },
   { name: "Vue / Nuxt.js", level: 90 },
   { name: "TypeScript", level: 88 },
+  { name: "PHP & laravel", level: 90 },
+  { name: "HTML & CSS", level: 100 },
   { name: "Tailwind / CSS", level: 95 },
   { name: "WordPress", level: 92 },
+  { name: "Page Builder", level: 100 },
   { name: "UI/UX & Figma", level: 85 },
   { name: "REST APIs", level: 88 },
+  { name: "AI Tools", level: 80 },
   { name: "Performance Opt.", level: 90 },
 ];
 

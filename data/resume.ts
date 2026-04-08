@@ -114,9 +114,13 @@ export const resume: Resume = {
   ],
   ourProjects: [
     { label: "secondopinion.sa", url: "https://secondopinion.sa" },
-    { label: "alzawabeed.net", url: "https://alzawabeed.net" },
     { label: "fivectech.com", url: "https://fivectech.com" },
-    { label: "pinospizzeriana.com", url: "https://pinospizzeriana.com" },
-    { label: "qirtas-store.com", url: "https://qirtas-store.com" }
+    { label: "pinospizzeriaa.com", url: "https://pinospizzeriaa.com/" },
+    { label: "qirtas-store.com", url: "https://qirtas-store.com" },
+    { label: "restohub.net", url: "https://restohub.net"},
+    { label: "sermnt.sa", url: "https://sermnt.sa/"},
+    { label: "aidaandhabibs.com", url: "https://aidaandhabibs.com/"},
+    { label: "locationarch.com", url: "https://locationarch.com"},
+    { label: "woodlymart.com", url: "https://woodlymart.com"}
   ]
 };

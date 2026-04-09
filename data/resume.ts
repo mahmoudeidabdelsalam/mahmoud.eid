@@ -121,6 +121,7 @@ export const resume: Resume = {
     { label: "sermnt.sa", url: "https://sermnt.sa/"},
     { label: "aidaandhabibs.com", url: "https://aidaandhabibs.com/"},
     { label: "locationarch.com", url: "https://locationarch.com"},
-    { label: "woodlymart.com", url: "https://woodlymart.com"}
+    { label: "woodlymart.com", url: "https://woodlymart.com"},
+    {label: "noi-eg.com", url: "https://noi-eg.com/"}
   ]
 };

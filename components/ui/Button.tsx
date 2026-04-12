@@ -32,10 +32,10 @@ export function Button({
       "hover:shadow-[0_0_0_1px_rgba(37,99,235,0.8),0_4px_32px_rgba(37,99,235,0.55)]",
     ].join(" "),
     outline: [
-      "border border-white/15 text-white/75",
-      "hover:border-blue-500/50 hover:text-white hover:bg-blue-500/8",
+      "border border-muted/15 text-muted/75",
+      "hover:border-blue-500/50 hover:text-muted hover:bg-blue-500/8",
     ].join(" "),
-    ghost: "text-white/50 hover:text-white hover:bg-white/5",
+    ghost: "text-muted/50 hover:text-muted hover:bg-muted/5",
   };
 
   const cls = `${base} ${styles[variant]} ${className}`;

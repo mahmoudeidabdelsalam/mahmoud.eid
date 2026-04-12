@@ -13,8 +13,8 @@ interface SkillGroup {
 function SkillBar({ name, level }: { name: string; level: number }) {
   return (
     <div className="flex items-center gap-3">
-      <span className="text-xs text-white/60 w-28 shrink-0">{name}</span>
-      <div className="flex-1 h-1.5 rounded-xs bg-white/6 overflow-hidden">
+      <span className="text-xs text-muted w-28 shrink-0">{name}</span>
+      <div className="flex-1 h-1.5 rounded-xs bg-bg-card/30 overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
@@ -23,7 +23,7 @@ function SkillBar({ name, level }: { name: string; level: number }) {
           className="h-full rounded-xs bg-linear-to-r from-blue-500 to-blue-400"
         />
       </div>
-      <span className="text-[10px] text-white/30 w-8 text-right">{level}%</span>
+      <span className="text-[10px] text-muted/30 w-8 text-right">{level}%</span>
     </div>
   );
 }
@@ -93,7 +93,7 @@ export function Skills({ resume }: { resume: Resume }) {
           <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-3">
             Technical <span className="gradient-text">Proficiency</span>
           </h2>
-          <p className="text-white/40 text-sm mb-10">
+          <p className="text-muted text-sm mb-10">
             Core skills ranked by depth of experience and daily usage.
           </p>
           <div className="flex flex-col gap-5">
@@ -108,7 +108,7 @@ export function Skills({ resume }: { resume: Resume }) {
           <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-3">
             Full <span className="gradient-text">Stack</span>
           </h2>
-          <p className="text-white/40 text-sm mb-10">
+          <p className="text-muted text-sm mb-10">
             Technologies and tools I work with across the stack.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -123,7 +123,7 @@ export function Skills({ resume }: { resume: Resume }) {
               >
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-base">{icon}</span>
-                  <span className="text-xs font-bold tracking-wider uppercase text-white/50">
+                  <span className="text-xs font-bold tracking-wider uppercase text-muted">
                     {label}
                   </span>
                 </div>
@@ -131,7 +131,7 @@ export function Skills({ resume }: { resume: Resume }) {
                   {skills.map((s) => (
                     <span
                       key={s}
-                      className="text-[11px] px-2 py-0.5 rounded-xs bg-white/6 text-white/60 border border-white/6"
+                      className="text-[11px] px-2 py-0.5 rounded-xs bg-bg-card/30 text-muted border border-border"
                     >
                       {s}
                     </span>

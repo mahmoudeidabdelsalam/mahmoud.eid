@@ -22,9 +22,9 @@ export function Hero({ resume }: { resume: Resume }) {
     >
       {/* Background layers */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-[900px] h-[700px] rounded-full bg-blue-700/10 blur-[140px]" />
-        <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] rounded-full bg-blue-600/8 blur-[90px]" />
-        <div className="absolute bottom-[10%] left-[5%] w-[250px] h-[250px] rounded-full bg-blue-600/8 blur-[80px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-225 h-175 rounded-full bg-blue-700/10 blur-[140px]" />
+        <div className="absolute top-[20%] right-[10%] w-75 h-75 rounded-full bg-blue-600/8 blur-[90px]" />
+        <div className="absolute bottom-[10%] left-[5%] w-62.5 h-62.5 rounded-full bg-blue-600/8 blur-[80px]" />
         <div
           className="absolute inset-0 opacity-[0.18]"
           style={{
@@ -92,7 +92,7 @@ export function Hero({ resume }: { resume: Resume }) {
           className="flex items-center justify-center gap-3 mb-4"
         >
           <div className="h-px w-12 bg-blue-500/40" />
-          <p className="text-base md:text-lg text-white/55 font-medium tracking-wide">
+          <p className="text-base md:text-lg text-muted/55 font-medium tracking-wide">
             Senior Front-End Developer &amp; Creative Designer
           </p>
           <div className="h-px w-12 bg-blue-500/40" />
@@ -103,7 +103,7 @@ export function Hero({ resume }: { resume: Resume }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="flex items-center justify-center gap-1.5 text-xs text-white/35 mb-10"
+          className="flex items-center justify-center gap-1.5 text-xs text-muted/35 mb-10"
         >
           <MapPin size={12} />
           {resume.location}
@@ -114,7 +114,7 @@ export function Hero({ resume }: { resume: Resume }) {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
-          className="text-white/45 text-sm md:text-base leading-[1.85] max-w-xl mx-auto mb-10"
+          className="text-muted/45 text-sm md:text-base leading-[1.85] max-w-xl mx-auto mb-10"
         >
           {resume.summary}
         </motion.p>
@@ -126,16 +126,16 @@ export function Hero({ resume }: { resume: Resume }) {
           transition={{ duration: 0.5, delay: 0.45 }}
           className="flex flex-wrap items-center justify-center gap-3 mb-16"
         >
-          <Button href={whatsappUrl} variant="primary" target="_blank">
+          <Button href={whatsappUrl} className="text-muted" variant="primary" target="_blank">
             <MessageCircle size={15} />
             WhatsApp Me
           </Button>
-          <Button href="/Mahmoud-Eid.pdf" variant="outline" target="_blank">
+          <Button href="/Mahmoud-Eid.pdf" className="text-muted" variant="outline" target="_blank">
             <Download size={15} />
             Download CV
           </Button>
           {resume.links.map((l) => (
-            <Button key={l.label} href={l.url} variant="outline" target="_blank">
+            <Button key={l.label} href={l.url} className="text-muted" variant="outline" target="_blank">
               {l.label} ↗
             </Button>
           ))}
@@ -146,12 +146,12 @@ export function Hero({ resume }: { resume: Resume }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex items-center justify-center gap-0 divide-x divide-white/10"
+          className="flex items-center justify-center gap-0 divide-x divide-muted/10"
         >
           {stats.map(({ value, label }) => (
             <div key={label} className="px-8 text-center first:pl-0 last:pr-0">
               <p className="text-2xl md:text-3xl font-black gradient-text mb-0.5">{value}</p>
-              <p className="text-xs text-white/35 font-medium">{label}</p>
+              <p className="text-xs text-muted/35 font-medium">{label}</p>
             </div>
           ))}
         </motion.div>
@@ -163,7 +163,7 @@ export function Hero({ resume }: { resume: Resume }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/25 hover:text-white/50 transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-muted/25 hover:text-muted/50 transition-colors"
       >
         <span className="text-[10px] tracking-widest uppercase font-medium">Scroll</span>
         <motion.div

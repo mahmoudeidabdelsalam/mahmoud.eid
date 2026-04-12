@@ -57,7 +57,7 @@ export function Contact({ resume }: { resume: Resume }) {
   ];
 
   const inputCls =
-    "w-full px-4 py-3 rounded-xs bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder-white/25 focus:outline-none focus:border-green-500/50 focus:bg-green-500/5 transition-all duration-200";
+    "w-full px-4 py-3 rounded-xs bg-bg-card/30 border border-border text-text text-sm placeholder-muted/25 focus:outline-none focus:border-green-500/50 focus:bg-green-500/5 transition-all duration-200";
 
   return (
     <Section id="contact">
@@ -67,7 +67,7 @@ export function Contact({ resume }: { resume: Resume }) {
         <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-4">
           Let&apos;s <span className="gradient-text">Work Together</span>
         </h2>
-        <p className="text-white/45 text-sm leading-relaxed">
+        <p className="text-muted text-sm leading-relaxed">
           Have a project in mind? Send me a WhatsApp message and I&apos;ll get back to you fast.
         </p>
       </div>
@@ -85,16 +85,16 @@ export function Contact({ resume }: { resume: Resume }) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className={`flex items-center gap-4 p-4 rounded-xs bg-bg-card border border-white/6 transition-all duration-200 group ${color}`}
+              className={`flex items-center gap-4 p-4 rounded-xs bg-bg-card border border-border transition-all duration-200 group ${color}`}
             >
-              <div className="w-10 h-10 rounded-xs bg-white/5 border border-white/8 flex items-center justify-center shrink-0 transition-colors">
-                <Icon size={16} className={`text-white/50 transition-colors ${iconColor}`} />
+              <div className="w-10 h-10 rounded-xs bg-bg-card/30 border border-border flex items-center justify-center shrink-0 transition-colors">
+                <Icon size={16} className={`text-muted transition-colors ${iconColor}`} />
               </div>
               <div className="min-w-0">
-                <p className="text-[10px] font-bold tracking-widest uppercase text-white/30 mb-0.5">{label}</p>
-                <p className="text-sm text-white/65 group-hover:text-white transition-colors truncate">{value}</p>
+                <p className="text-[10px] font-bold tracking-widest uppercase text-muted/30 mb-0.5">{label}</p>
+                <p className="text-sm text-muted group-hover:text-text transition-colors truncate">{value}</p>
               </div>
-              <ArrowUpRight size={14} className="ml-auto text-white/20 group-hover:text-white/60 transition-colors shrink-0" />
+              <ArrowUpRight size={14} className="ml-auto text-muted/20 group-hover:text-muted/60 transition-colors shrink-0" />
             </motion.a>
           ))}
         </div>
@@ -125,7 +125,7 @@ export function Contact({ resume }: { resume: Resume }) {
             className={`${inputCls} resize-none`}
           />
           <div className="flex items-center justify-between">
-            <p className="text-xs text-white/25">Opens WhatsApp with your message pre-filled.</p>
+            <p className="text-xs text-muted/25">Opens WhatsApp with your message pre-filled.</p>
             <Button variant="primary" size="md">
               <Send size={14} />
               Send via WhatsApp

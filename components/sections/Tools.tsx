@@ -24,7 +24,7 @@ export function Tools() {
       <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-3">
         My <span className="gradient-text">Toolkit</span>
       </h2>
-      <p className="text-white/40 text-sm mb-12">
+      <p className="text-muted text-sm mb-12">
         The tools and technologies I reach for every day.
       </p>
 
@@ -37,10 +37,10 @@ export function Tools() {
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: i * 0.04, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -5, scale: 1.06 }}
-            className={`flex flex-col items-center gap-2.5 p-4 rounded-xs bg-bg-card border border-white/6 transition-all duration-200 cursor-default ${tool.color}`}
+            className={`flex flex-col items-center gap-2.5 p-4 rounded-xs bg-bg-card border border-border transition-all duration-200 cursor-default ${tool.color}`}
           >
             <span className="text-2xl leading-none">{tool.emoji}</span>
-            <span className="text-[11px] text-white/45 font-medium text-center leading-tight">
+            <span className="text-[11px] text-muted font-medium text-center leading-tight">
               {tool.name}
             </span>
           </motion.div>

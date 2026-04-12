@@ -44,10 +44,10 @@ export function About({ resume }: { resume: Resume }) {
             Crafting digital experiences that{" "}
             <span className="gradient-text">scale and perform</span>
           </h2>
-          <p className="text-white/50 leading-[1.9] mb-5 text-sm md:text-base">
+          <p className="text-muted leading-[1.9] mb-5 text-sm md:text-base">
             {resume.summary}
           </p>
-          <p className="text-white/40 leading-[1.9] text-sm">
+          <p className="text-muted/60 leading-[1.9] text-sm">
             I specialize in bridging the gap between design and engineering —
             turning complex UI/UX concepts into fast, accessible, and
             maintainable frontend systems. Whether it&apos;s a headless
@@ -60,7 +60,7 @@ export function About({ resume }: { resume: Resume }) {
             {[resume.location, "Open to Remote", "14+ Years Exp."].map((f) => (
               <span
                 key={f}
-                className="text-xs px-3 py-1.5 rounded-xs border border-white/10 text-white/50 bg-white/3"
+                className="text-xs px-3 py-1.5 rounded-xs border border-border text-muted bg-bg-card/30"
               >
                 {f}
               </span>
@@ -79,11 +79,11 @@ export function About({ resume }: { resume: Resume }) {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               <Card className="h-full flex flex-col gap-3 group hover:border-blue-500/30 transition-colors duration-300">
-                <div className={`w-10 h-10 rounded-xs bg-linear-to-br ${color} flex items-center justify-center border border-white/6`}>
+                <div className={`w-10 h-10 rounded-xs bg-linear-to-br ${color} flex items-center justify-center border border-border`}>
                   <Icon size={18} className="text-blue-300" />
                 </div>
                 <p className="font-bold text-sm leading-snug">{title}</p>
-                <p className="text-white/40 text-xs leading-relaxed">{desc}</p>
+                <p className="text-muted text-xs leading-relaxed">{desc}</p>
               </Card>
             </motion.div>
           ))}

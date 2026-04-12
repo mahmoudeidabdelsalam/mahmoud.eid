@@ -1,7 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
 const links = [
   { label: "About", href: "#about" },
@@ -15,6 +16,7 @@ export function Navbar({ name }: { name: string }) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
@@ -46,7 +48,7 @@ export function Navbar({ name }: { name: string }) {
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-bg/80 backdrop-blur-2xl border-b border-white/6 shadow-[0_1px_40px_rgba(0,0,0,0.4)]"
+          ? "bg-bg/80 backdrop-blur-2xl border-b border-border shadow-[0_1px_40px_rgba(0,0,0,0.4)]"
           : "bg-transparent"
       }`}
     >
@@ -54,7 +56,7 @@ export function Navbar({ name }: { name: string }) {
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 group">
           <img
-            src="/logo-white.webp"
+            src="/logo.webp"
             alt={name}
             className="h-8 w-auto object-contain"
           />
@@ -68,14 +70,14 @@ export function Navbar({ name }: { name: string }) {
               href={l.href}
               className={`relative px-3.5 py-2 text-sm rounded-xs transition-colors duration-200 ${
                 active === l.href
-                  ? "text-white"
-                  : "text-white/50 hover:text-white/80"
+                  ? "text-text"
+                  : "text-muted hover:text-text/80"
               }`}
             >
               {active === l.href && (
                 <motion.span
                   layoutId="nav-pill"
-                  className="absolute inset-0 rounded-xs bg-white/[0.07]"
+                  className="absolute inset-0 rounded-xs bg-bg-card/70"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
                 />
               )}
@@ -85,6 +87,13 @@ export function Navbar({ name }: { name: string }) {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
+          <button
+            onClick={toggleTheme}
+            className="w-9 h-9 flex items-center justify-center rounded-xs border border-border text-muted hover:text-text hover:border-border/80 transition-all"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <a
             href="#contact"
             className="text-sm px-4 py-2 rounded-xs bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-colors duration-200 shadow-[0_0_16px_rgba(37,99,235,0.4)]"
@@ -94,13 +103,22 @@ export function Navbar({ name }: { name: string }) {
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden w-9 h-9 flex items-center justify-center rounded-xs border border-white/10 text-white/60 hover:text-white hover:border-white/20 transition-all"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={18} /> : <Menu size={18} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            className="w-9 h-9 flex items-center justify-center rounded-xs border border-border text-muted hover:text-text hover:border-border/80 transition-all"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <button
+            className="w-9 h-9 flex items-center justify-center rounded-xs border border-border text-muted hover:text-text hover:border-border/80 transition-all"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -111,7 +129,7 @@ export function Navbar({ name }: { name: string }) {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-bg/95 backdrop-blur-2xl border-b border-white/6"
+            className="md:hidden bg-bg/95 backdrop-blur-2xl border-b border-border"
           >
             <div className="px-4 py-5 flex flex-col gap-1">
               {links.map((l) => (
@@ -119,7 +137,7 @@ export function Navbar({ name }: { name: string }) {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="px-3 py-2.5 rounded-xs text-sm text-white/60 hover:text-white hover:bg-white/5 transition-all"
+                  className="px-3 py-2.5 rounded-xs text-sm text-muted hover:text-text hover:bg-bg-card/30 transition-all"
                 >
                   {l.label}
                 </a>

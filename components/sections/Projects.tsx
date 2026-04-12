@@ -42,7 +42,7 @@ export function Projects({ resume }: { resume: Resume }) {
       <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-3">
         Featured <span className="gradient-text">Work</span>
       </h2>
-      <p className="text-white/40 text-sm mb-12">
+      <p className="text-muted/40 text-sm mb-12">
         A selection of projects that showcase my technical range and impact.
       </p>
 
@@ -55,11 +55,11 @@ export function Projects({ resume }: { resume: Resume }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group relative bg-bg-card border border-white/6 rounded-xs p-6 flex flex-col gap-4 hover:border-blue-500/35 hover:bg-bg-card-hover transition-all duration-300 overflow-hidden cursor-default"
+            className="group relative bg-bg-card border border-muted/6 rounded-xs p-6 flex flex-col gap-4 hover:border-blue-500/35 hover:bg-bg-card-hover transition-all duration-300 overflow-hidden cursor-default"
           >
             {/* Gradient bg */}
             <div className={`absolute inset-0 bg-linear-to-br ${p.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
-            <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/8 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-muted/8 to-transparent" />
 
             {/* Metric badge */}
             <div className="relative flex items-start justify-between">
@@ -68,14 +68,14 @@ export function Projects({ resume }: { resume: Resume }) {
                 <span className="text-xs font-bold text-emerald-300">{p.highlight}</span>
                 <span className="text-[10px] text-emerald-400/60">{p.highlightLabel}</span>
               </div>
-              <ArrowUpRight size={16} className="text-white/20 group-hover:text-blue-400 transition-colors duration-200" />
+              <ArrowUpRight size={16} className="text-muted/20 group-hover:text-blue-400 transition-colors duration-200" />
             </div>
 
             <div className="relative">
               <h3 className="font-bold text-sm mb-2 group-hover:text-blue-200 transition-colors duration-200">
                 {p.title}
               </h3>
-              <p className="text-white/45 text-xs leading-relaxed">{p.description}</p>
+              <p className="text-muted/45 text-xs leading-relaxed">{p.description}</p>
             </div>
 
             <div className="relative flex flex-wrap gap-1.5 mt-auto pt-1">
@@ -89,7 +89,7 @@ export function Projects({ resume }: { resume: Resume }) {
 
       {/* Live projects */}
       <div>
-        <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/30 mb-5">
+        <p className="text-xs font-bold tracking-[0.2em] uppercase text-muted/30 mb-5">
           Live Projects
         </p>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
@@ -104,15 +104,15 @@ export function Projects({ resume }: { resume: Resume }) {
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: i * 0.06 }}
               whileHover={{ y: -2 }}
-              className="flex items-center justify-between px-4 py-3.5 rounded-xs bg-bg-card border border-white/6 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-200 group"
+              className="flex items-center justify-between px-4 py-3.5 rounded-xs bg-bg-card border border-muted/6 hover:border-blue-500/30 hover:bg-blue-500/5 transition-all duration-200 group"
             >
               <div className="flex items-center gap-2.5">
                 <div className="w-1.5 h-1.5 rounded-xs bg-blue-500/50 group-hover:bg-blue-400 transition-colors" />
-                <span className="text-sm text-white/60 group-hover:text-white transition-colors">
+                <span className="text-sm text-muted/60 group-hover:text-muted transition-colors">
                   {p.label}
                 </span>
               </div>
-              <ExternalLink size={13} className="text-white/25 group-hover:text-blue-400 transition-colors" />
+              <ExternalLink size={13} className="text-muted/25 group-hover:text-blue-400 transition-colors" />
             </motion.a>
           ))}
         </div>

@@ -8,10 +8,10 @@ export function Footer({ resume }: { resume: Resume }) {
 
       <div className="relative max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
         <div className="flex items-center gap-3">
-          <img src="/logo.webp" alt={resume.name} className="h-6 w-auto object-contain" />
           <p className="text-sm text-muted/30">
-            © {new Date().getFullYear()} {resume.name}
+            {new Date().getFullYear()} © 
           </p>
+          <img src="/logo.webp" alt={resume.name} className="h-6 w-auto object-contain" />
         </div>
 
         <p className="text-xs text-muted/20 hidden sm:block">

@@ -37,8 +37,6 @@ export function Hero({ resume }: { resume: Resume }) {
 
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto w-full">
-
-        {/* Avatar */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -46,13 +44,6 @@ export function Hero({ resume }: { resume: Resume }) {
           className="flex justify-center mb-6"
         >
           <div className="relative">
-            <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-blue-500/30 shadow-[0_0_30px_rgba(37,99,235,0.3)]">
-              <img
-                src="/avatar.png"
-                alt={resume.name}
-                className="w-full h-full object-cover"
-              />
-            </div>
             {/* Online dot */}
             <span className="absolute bottom-1 right-1 w-4 h-4 rounded-full bg-green-400 border-2 border-bg shadow-sm">
               <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75" />

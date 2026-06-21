@@ -53,39 +53,6 @@ export function Navbar({ name }: { name: string }) {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#hero" className="flex items-center gap-2 group">
-          <img
-            src="/logo.webp"
-            alt={name}
-            className="h-8 w-auto object-contain"
-          />
-        </a>
-
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-1">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className={`relative px-3.5 py-2 text-sm rounded-xs transition-colors duration-200 ${
-                active === l.href
-                  ? "text-text"
-                  : "text-muted hover:text-text/80"
-              }`}
-            >
-              {active === l.href && (
-                <motion.span
-                  layoutId="nav-pill"
-                  className="absolute inset-0 rounded-xs bg-bg-card/70"
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
-                />
-              )}
-              <span className="relative">{l.label}</span>
-            </a>
-          ))}
-        </div>
-
         <div className="hidden md:flex items-center gap-3">
           <button
             onClick={toggleTheme}
@@ -119,6 +86,37 @@ export function Navbar({ name }: { name: string }) {
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
         </div>
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-1">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className={`relative px-3.5 py-2 text-sm rounded-xs transition-colors duration-200 ${
+                active === l.href
+                  ? "text-text"
+                  : "text-muted hover:text-text/80"
+              }`}
+            >
+              {active === l.href && (
+                <motion.span
+                  layoutId="nav-pill"
+                  className="absolute inset-0 rounded-xs bg-bg-card/70"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
+                />
+              )}
+              <span className="relative">{l.label}</span>
+            </a>
+          ))}
+        </div>
+        {/* Logo */}
+        <a href="#hero" className="flex items-center gap-2 group">
+          <img
+            src="/logo.webp"
+            alt={name}
+            className="h-8 w-auto object-contain"
+          />
+        </a>
       </div>
 
       {/* Mobile menu */}
